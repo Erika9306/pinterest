@@ -29,13 +29,37 @@ export const RandomImg = async () => {
         const btn = Button({ text: 'Visitar',
             fnc: ()=> window.open(image.links.html, '_blank' )
          });
-        
-      
-         
-        imgContainer.appendChild(img);
-        imgContainer.appendChild(btn);
        
+         const profileImg = document.createElement('img');
+         profileImg.src = image.user.profile_image.small; 
+         profileImg.classList.add('profile_img');
+
+         
+         const userProfile = document.createElement('div');
+         userProfile.classList.add('userProfile');
+
+         const name = document.createElement('p');
+         name.textContent = image.user.name;
+
+         const fecha = document.createElement('span');
+         const date = new Date(image.created_at);
+         fecha.innerHTML= date.toLocaleDateString();
+
+         
+         
+         // Borde con color aleatorio
+         const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+         profileImg.style.border = `2px solid ${randomColor}`;
+         
+
+         userProfile.appendChild(name);
+        userProfile.appendChild(fecha);
+        imgContainer.appendChild(img);
+        imgContainer.appendChild(btn); 
+        imgContainer.appendChild(profileImg);     
+
         div.appendChild(imgContainer);
+        div.appendChild(userProfile);
         sectionImages.appendChild(div);
     });
     
