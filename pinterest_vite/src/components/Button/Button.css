@@ -1,0 +1,10 @@
+.common_btn{
+    background-color: #fe0000;
+    color: #ffffff; 
+    width: 30%;  
+    font-weight: 600; 
+    padding: 8px;
+    border-radius: 25px;
+    border: 2px solid  #fe0000;
+   
+}
