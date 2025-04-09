@@ -1,6 +1,5 @@
 .sectionImages {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 columnas */
+    column-count: 5;
     gap: 15px;
     padding: 20px;
 }
@@ -9,11 +8,12 @@
     break-inside: avoid;
     margin-bottom: 15px;
     width: 100%;
+    padding-top: 20px;
 }
 
 .img-container {
-    position: relative; /* Es necesario para posicionar elementos dentro */
-    width: 100%;
+    position: relative; 
+     width: 100%;
     display: block;
     overflow: hidden;
     border-radius: 10px;
@@ -45,29 +45,33 @@
 }
 
 
-.profile_img {
-    width: 50px; 
+.img-container .author-wrapper {
+    width: 50px;
     height: 50px;
     border-radius: 50%;
-    object-fit: cover; 
-    position: absolute;
-    bottom: -20px; 
-    left: 50%; 
+    object-fit: cover;
+    display: block;
+    position:absolute;
+    bottom: -10px;
+    left: 50%;
+    z-index: 3;
     transform: translateX(-50%);
     border: 3px solid #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 
 .userProfile {
+    position: relative;
     text-align: center;
     margin-top: 35px; 
     font-size: 0.9rem;
     font-weight: 500;
     color: #333;
+    
 }
 
-.userProfile p {
+.userProfile > p {
     margin: 2px 0;
 }
 
@@ -76,3 +80,12 @@
     width: auto;
     height: auto;
 } 
+
+.img-container .picBtn{
+    background-color: rgb(201, 201, 201);
+    color: black;
+    position: absolute;
+    width: 18%;
+    top:20px;
+    border-radius: 50%;
+}
