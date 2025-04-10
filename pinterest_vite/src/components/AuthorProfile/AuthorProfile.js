@@ -22,7 +22,7 @@ export const AuthorProfile = ({image, fullName, date}) =>{
   fecha.innerHTML = `<span>${date}</span>`;
 
   // colores aleatorios en el borde
-  const colors = ['#FF816BFF', '#7ECB6BFF', '#824DFFFF', '#F2FF3DFF', '#D65D8DFF'];
+  const colors = ['#FF2903FF', '#3CBA1CFF', '#9365FEFF', '#F1FF28FF', '#CE2E6EFF','#2E35FFFF'];
 const randomColor = colors[Math.floor(Math.random() * colors.length)];
 profileImg.style.border = `3px solid ${randomColor}`;
 

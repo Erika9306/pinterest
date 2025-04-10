@@ -91,3 +91,32 @@
     border-radius: 50%;
     opacity: 1;
 }
+
+
+.sectionImages {
+    column-count: 5; 
+    gap: 15px;
+    padding: 20px;
+  }
+  
+ 
+  @media (max-width: 850px) {
+    .sectionImages {
+      column-count: 3;
+    }
+  }
+  
+  
+  @media (max-width: 650px) {
+    .sectionImages {
+      column-count: 2;
+    }
+  }
+  
+ 
+  @media (max-width: 450px) {
+    .sectionImages {
+      column-count: 1;
+    }
+  }
+  

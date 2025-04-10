@@ -33,6 +33,8 @@ export const Header = () =>{
     const searchFile = Search(); 
 
     const ulPersonal = document.createElement('ul');
+    ulPersonal.classList.add('personal-links');
+
     
     for (let i = 0; i < privateLinks.length; i++){
         ulPersonal.appendChild(PrivateLink(privateLinks[i]));
