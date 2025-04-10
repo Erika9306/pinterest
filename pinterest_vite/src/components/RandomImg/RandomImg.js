@@ -50,8 +50,7 @@ export const RandomImg = async () => {
             fullName: image.user.name,
             date: new Date (image.created_at).toLocaleDateString()
         });
-         
-                 
+                         
         
          imgContainer.append(img, btn);         
          imgContainer.append(totalPhotosBtn, likesBtn);     

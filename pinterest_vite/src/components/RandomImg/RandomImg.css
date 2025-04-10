@@ -2,6 +2,7 @@
     column-count: 5;
     gap: 15px;
     padding: 20px;
+    z-index: 0;
 }
 
 .img-wrapper {
@@ -63,8 +64,7 @@
 
 .userProfile {
     position: relative;
-    text-align: center;
-    margin-top: 35px; 
+    text-align: center;   
     font-size: 0.9rem;
     font-weight: 500;
     color: #333;
@@ -81,11 +81,13 @@
     height: auto;
 } 
 
-.img-container .picBtn{
+
+.img-container:hover .pic-info-btn{
     background-color: rgb(201, 201, 201);
     color: black;
     position: absolute;
     width: 18%;
     top:20px;
     border-radius: 50%;
+    opacity: 1;
 }

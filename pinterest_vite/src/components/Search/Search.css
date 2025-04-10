@@ -22,3 +22,99 @@
   border-color: #e3c0c5;
   box-shadow: 0 0 5px rgba(212, 64, 87, 0.5);
 }
+
+.sectionImages {
+  column-count: 5;
+  gap: 15px;
+  padding: 20px;
+  z-index: 0;
+}
+
+.img-wrapper {
+  break-inside: avoid;
+  margin-bottom: 15px;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.img-container {
+  position: relative; 
+   width: 100%;
+  display: block;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.img-container img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+  transition: filter 0.3s ease;
+}
+
+.img-container .common_btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.img-container:hover img {
+  filter: brightness(60%);
+}
+
+.img-container:hover .common_btn {
+  opacity: 1;
+}
+
+
+.img-container .author-wrapper {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  position:absolute;
+  bottom: -10px;
+  left: 50%;
+  z-index: 3;
+  transform: translateX(-50%);
+  border: 3px solid #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.userProfile {
+  position: relative;
+  text-align: center;   
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+  
+}
+
+.userProfile > p {
+  margin: 2px 0;
+}
+
+.userProfile span::before{
+  content: "↥ ";
+  width: auto;
+  height: auto;
+} 
+
+
+.img-container:hover .pic-info-btn{
+  background-color: rgb(201, 201, 201);
+  color: black;
+  position: absolute;
+  width: 18%;
+  top:20px;
+  border-radius: 50%;
+  opacity: 1;
+}
+
+

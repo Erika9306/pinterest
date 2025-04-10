@@ -2,7 +2,6 @@ import './AuthorProfile.css';
 
 export const AuthorProfile = ({image, fullName, date}) =>{
     
-
   const div = document.createElement('div');
   div.classList.add('author-wrapper');
 
@@ -22,8 +21,13 @@ export const AuthorProfile = ({image, fullName, date}) =>{
   const fecha = document.createElement('p');
   fecha.innerHTML = `<span>${date}</span>`;
 
-  userInfo.append(nameAuthor, fecha);
+  // colores aleatorios en el borde
+  const colors = ['#FF816BFF', '#7ECB6BFF', '#824DFFFF', '#F2FF3DFF', '#D65D8DFF'];
+const randomColor = colors[Math.floor(Math.random() * colors.length)];
+profileImg.style.border = `3px solid ${randomColor}`;
 
+
+  userInfo.append(nameAuthor, fecha);
   div.append(profileImg, userInfo);
 
   return div;
