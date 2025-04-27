@@ -23,7 +23,6 @@ export const Search = () => {
             let pictures = await searchingResults(term);
             
             if (!pictures || pictures.length === 0) {
-                alert(`No se encontraron resultados para "${term}". Mostraré imágenes de los michis.`);
                 pictures = await searchingResults('gatos');
                 
             }

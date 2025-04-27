@@ -3,6 +3,7 @@
     padding: 0;  
     box-sizing: border-box;  
     --bg-color: rgb(255, 255, 255);
+    --bg-color-hover: black;
 
 }
 header{
@@ -50,7 +51,7 @@ ul{
 a {
     text-decoration: none;
     margin-left: 3px;
-    color: black;
+    color: var(--bg-color-hover);
     font-weight: 400;
     padding: 4px; 
     border-radius: 25px;     
@@ -58,7 +59,7 @@ a {
 }
 
 a:hover {
-    background-color: black;
+    background-color: var(--bg-color-hover);
     color: rgb(255, 255, 255);
     border: 2px solid black;
     cursor: pointer;
